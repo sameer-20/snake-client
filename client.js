@@ -19,6 +19,22 @@ const connect = function () {
     conn.write("Name: S@m"); // Adding name to the snake
   })
 
+  conn.on('data', () => {
+    conn.write("Move: up");
+  })
+
+  conn.on('data', () => {
+    conn.write("Move: left");
+  })
+
+  conn.on('data', () => {
+    conn.write("Move: down");
+  })
+
+  conn.on('data', () => {
+    conn.write("Move: right");
+  })
+
   conn.on('data', (message) => {  // Logging message from the server
     console.log(message);
   }) 
@@ -27,4 +43,4 @@ const connect = function () {
 };
 
 
-module.exports = connect;
+module.exports = { connect };
