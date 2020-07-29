@@ -37,6 +37,12 @@ const handleUserInput = function (key) {
     //console.log("right");
     connection.write(`Move: right`);
   }
+  if (key === 'q' || key === 'Q') { 
+    connection.write(`Say: DANGER!`);
+  }
+  if (key === 'e' || key === 'E') { 
+    connection.write(`Say: Go Away!`);
+  }
 };
 
 
