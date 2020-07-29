@@ -11,6 +11,10 @@ const connect = function () {
   });
   conn.setEncoding('utf8'); // Interpret incoming data as text
   
+  conn.on ('connect', () => {
+    console.log("Successfully connected to game server");
+  })
+
   conn.on('connect', () => {  
     conn.write("Name: S@m"); // Adding name to the snake
   })
