@@ -13,28 +13,9 @@ const connect = function () {
   
   conn.on ('connect', () => {
     console.log("Successfully connected to game server");
-  })
-
-  conn.on('connect', () => {  
     conn.write("Name: S@m"); // Adding name to the snake
-  })
-
-  conn.on('data', () => {
-    conn.write("Move: up");
-  })
-
-  conn.on('data', () => {
-    conn.write("Move: left");
-  })
-
-  conn.on('data', () => {
-    conn.write("Move: down");
-  })
-
-  conn.on('data', () => {
-    conn.write("Move: right");
-  })
-
+  });
+  
   conn.on('data', (message) => {  // Logging message from the server
     console.log(message);
   }) 
