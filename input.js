@@ -1,5 +1,7 @@
 //
 
+const { MOVE_UP, 	MOVE_DOWN, 	MOVE_RIGHT, 	MOVE_LEFT, } = require('./constants');
+
 //let connection;
 
 /**
